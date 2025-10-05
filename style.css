@@ -1,183 +1,75 @@
 /* =============================
-   Modern Pink Theme for Nazerke's Page
-   ============================= */
+   Modern Pink Responsive Portfolio
+============================= */
 
-/* ---------- Base & Fonts ---------- */
 body {
-  font-family: 'Poppins', Arial, sans-serif;
-  background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
+  font-family: 'Poppins', sans-serif;
+  background: #ffe6f0;
   color: #3a0e3c;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  line-height: 1.5;
+  line-height: 1.6;
 }
+
+/* ---------- Navbar ---------- */
+.navbar.bg-pink {
+  background: linear-gradient(90deg, #ff8fc1, #ff5fa3) !important;
+  box-shadow: 0 5px 15px rgba(255,95,163,0.3);
+}
+.nav-link { color: white !important; font-weight: 600; }
+.nav-link:hover { color: #ffe6f0 !important; }
 
 /* ---------- Header ---------- */
-header {
-  background: linear-gradient(90deg, #ff8fc1, #ff5fa3);
-  color: white;
-  padding: 30px 20px;
-  border-bottom: 5px solid #ff2e84;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 8px 20px rgba(255,0,120,0.2);
-}
-header h1 {
-  font-size: 2.5rem;
-  margin: 0.2em 0;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-header h2, header h3 {
-  margin: 5px 0;
-}
+header h1 { color: #ff2e84; }
+header p { color: #3a0e3c; }
 
-/* ---------- Paragraphs ---------- */
-p {
-  font-size: 1rem;
-  margin: 10px auto;
-  max-width: 700px;
-}
-
-/* ---------- Lists ---------- */
-ol, ul {
-  text-align: left;
-  display: inline-block;
-  margin-top: 10px;
-}
-a {
-  text-decoration: none;
-  color: #ff2e84;
-  font-weight: 600;
-  transition: 0.3s;
-}
-a:hover {
-  color: #ff8fc1;
-}
-
-/* ---------- Image ---------- */
-img {
+/* ---------- Boxes ---------- */
+.boxes .box {
+  background: #ffe6f0;
   border-radius: 20px;
-  border: 4px solid #ff5fa3;
-  margin-top: 15px;
+  padding: 40px;
+  width: 250px;
+  text-align: center;
+  font-weight: 600;
+  color: #ff2e84;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.boxes .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255,95,163,0.4);
+}
+
+/* ---------- Project Cards ---------- */
+.project-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(255,95,163,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255,95,163,0.5);
+}
+.project-card .btn {
+  background: linear-gradient(90deg, #ff5fa3, #ff8fc1);
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
   transition: transform 0.3s;
 }
-img:hover {
-  transform: scale(1.05);
-}
-
-/* ---------- Buttons ---------- */
-.btn {
-  background: linear-gradient(90deg, #ff5fa3, #ff8fc1);
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  font-size: 16px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 8px 15px rgba(255,95,163,0.3);
-}
-.btn:hover {
-  background: linear-gradient(90deg, #ff8fc1, #ff5fa3);
+.project-card .btn:hover {
   transform: scale(1.1);
+  background: linear-gradient(90deg, #ff8fc1, #ff5fa3);
 }
 
-/* ---------- Table ---------- */
-table {
-  border-collapse: collapse;
-  margin: 20px auto;
+/* ---------- Sidebar ---------- */
+.sidebar {
   background: #ffe6f0;
-  box-shadow: 0 8px 20px rgba(255,95,163,0.2);
+  padding: 20px;
   border-radius: 15px;
-  overflow: hidden;
-}
-th, td {
-  border: 1px solid #ffb3d1;
-  padding: 14px 24px;
-}
-th {
-  background-color: #ff5fa3;
-  color: white;
-}
-
-/* ---------- Form ---------- */
-form {
-  margin-top: 20px;
-  background: #ffe6f0;
-  padding: 30px;
-  display: inline-block;
-  border-radius: 20px;
   box-shadow: 0 8px 20px rgba(255,95,163,0.2);
 }
-label {
-  display: block;
-  margin: 12px 0;
-}
-input, textarea {
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #ffb3d1;
-  width: 100%;
-  max-width: 400px;
-  outline: none;
-}
-input:focus, textarea:focus {
-  border-color: #ff5fa3;
-}
 
-/* ---------- Section Titles ---------- */
-section h2 {
-  font-size: 2rem;
-  margin: 25px 0 15px 0;
-  color: #ff2e84;
-}
-
-/* ---------- CARD CONTAINER ---------- */
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-/* ---------- INDIVIDUAL CARD ---------- */
-.card {
-    background: #ffe6f0;
-    border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(255,95,163,0.3);
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card img {
-    width: 100%;
-    border-radius: 20px;
-    border: 3px solid #ff5fa3;
-    transition: transform 0.3s;
-}
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(255,95,163,0.5);
-}
-.card h3 {
-    color: #ff2e84;
-    margin: 15px 0 10px 0;
-}
-.card p {
-    font-size: 0.9rem;
-    color: #3a0e3c;
-    margin-bottom: 15px;
-}
-.card .btn {
-    background: linear-gradient(90deg, #ff5fa3, #ff8fc1);
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 14px;
-}
-.card .btn:hover {
-    transform: scale(1.1);
-    background: linear-gradient(90deg, #ff8fc1, #ff5fa3);
+/* ---------- Footer ---------- */
+footer {
+  background: linear-gradient(90deg, #ff8fc1, #ff5fa3);
+  box-shadow: 0 -5px 15px rgba(255,95,163,0.3);
 }
