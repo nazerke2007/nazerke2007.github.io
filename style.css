@@ -1,165 +1,183 @@
-:root{
-  --accent-1: #ff6b6b;
-  --accent-2: #6b5bff;
-  --accent-3: #ffcf6b;
-  --glass: rgba(255,255,255,0.85);
-  --bg-dark: linear-gradient(135deg,#0f1724,#0b2545 60%);
-}
+/* =============================
+   Modern Pink Theme for Nazerke's Page
+   ============================= */
 
-/* page background */
-body{
-  font-family: 'Segoe UI', system-ui, -apple-system, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg,#f7f7ff 0%, #e9f0ff 50%);
-  color: #0b2340;
+/* ---------- Base & Fonts ---------- */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
+  color: #3a0e3c;
+  margin: 0;
+  padding: 0;
+  text-align: center;
   line-height: 1.5;
 }
 
-/* ---------- Navbar theming (bootstrap classes used) ---------- */
-.bg-gradient{
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+/* ---------- Header ---------- */
+header {
+  background: linear-gradient(90deg, #ff8fc1, #ff5fa3);
+  color: white;
+  padding: 30px 20px;
+  border-bottom: 5px solid #ff2e84;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 8px 20px rgba(255,0,120,0.2);
 }
-.bg-gradient-dark{
-  background: linear-gradient(90deg,#0b2545,#113a6a);
+header h1 {
+  font-size: 2.5rem;
+  margin: 0.2em 0;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-
-/* brand bubble */
-.brand-bubble{
-  display:inline-flex;
-  width:38px;height:38px;border-radius:10px;
-  background: rgba(255,255,255,0.15);
-  align-items:center;justify-content:center;font-size:18px;
-}
-
-/* brand text */
-.brand-text{
-  font-weight:700;
-  letter-spacing:0.3px;
+header h2, header h3 {
+  margin: 5px 0;
 }
 
-/* section title styling */
-.section-title{
-  font-weight:700;
-  color: #243d5a;
-  margin-bottom:1rem;
-  text-align:left;
+/* ---------- Paragraphs ---------- */
+p {
+  font-size: 1rem;
+  margin: 10px auto;
+  max-width: 700px;
 }
 
-/* responsive paragraph example */
-.responsive-text{
-  background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
-  padding: 12px;
-  border-radius: 10px;
+/* ---------- Lists ---------- */
+ol, ul {
+  text-align: left;
+  display: inline-block;
+  margin-top: 10px;
+}
+a {
+  text-decoration: none;
+  color: #ff2e84;
+  font-weight: 600;
+  transition: 0.3s;
+}
+a:hover {
+  color: #ff8fc1;
 }
 
-/* ---------- Boxes (Task 1: CSS-only responsive) ---------- */
-.boxes-row{
-  display:flex;
-  gap:16px;
-  justify-content:space-between;
-  align-items:stretch;
-  margin-top:12px;
+/* ---------- Image ---------- */
+img {
+  border-radius: 20px;
+  border: 4px solid #ff5fa3;
+  margin-top: 15px;
+  transition: transform 0.3s;
 }
-.box{
-  background: linear-gradient(180deg,#ffffff,#fff8f0);
-  border: 2px solid rgba(107,91,255,0.12);
-  padding:20px;
-  border-radius:12px;
-  flex:1;
-  min-height:120px;
-  text-align:center;
-  box-shadow: 0 6px 18px rgba(99, 92, 255, 0.08);
-  transition: transform 0.28s, box-shadow 0.28s;
-}
-.box:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(99,92,255,0.14);
+img:hover {
+  transform: scale(1.05);
 }
 
-/* ---------- Bootstrap grid cards look ---------- */
-.bg-glass{
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(11,35,64,0.06);
-  border-radius:10px;
-  box-shadow: 0 8px 20px rgba(11,35,64,0.04);
-}
-
-/* ---------- Project cards & CTA ---------- */
-.project-card img{
-  border-top-left-radius: .375rem;
-  border-top-right-radius: .375rem;
-  object-fit: cover;
-  height: 160px;
-}
-.project-card .card-body{ min-height:130px; }
-.btn-cta{
-  background: linear-gradient(90deg,var(--accent-2),var(--accent-1));
+/* ---------- Buttons ---------- */
+.btn {
+  background: linear-gradient(90deg, #ff5fa3, #ff8fc1);
   color: white;
   border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-}
-.btn-cta:hover{ transform: translateY(-3px); filter: brightness(1.03); }
-
-/* ---------- Sidebar ---------- */
-.sidebar-card{ border: none; box-shadow: 0 8px 22px rgba(11,35,64,0.06); }
-.sidebar-avatar{ width:64px;height:64px;object-fit:cover; }
-
-/* badges */
-.badge.skill{ background: linear-gradient(90deg,#ffd36b,#ff7b7b); color: #222; padding:6px 8px; border-radius:8px; }
-
-/* ---------- Gallery images hover caption idea (simple) ---------- */
-.gallery-img{
-  transition: transform .28s, filter .28s;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 50px;
   cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 8px 15px rgba(255,95,163,0.3);
 }
-.gallery-img:hover{ transform: scale(1.04); filter: saturate(1.08); }
-
-/* ---------- Footer ---------- */
-footer small{ opacity: 0.9; }
-
-/* ========= MEDIA QUERIES (RESPONSIVE TYPOGRAPHY & LAYOUT CHANGES) ========= */
-
-/* Base font sizes (mobile-first) */
-html{ font-size: 14px; }
-h2.section-title{ font-size: 1.05rem; }
-.responsive-text, p, small { font-size: 0.95rem; }
-h3 { font-size: 1.05rem; }
-
-/* ---- small phones up to 575px (mobile) ---- */
-/* Mobile: boxes stacked vertically */
-@media (max-width: 575.98px){
-  .boxes-row{ flex-direction: column; }
-  .box{ width:100%; }
-  html{ font-size:13px; } /* slightly smaller text on tiny phones */
+.btn:hover {
+  background: linear-gradient(90deg, #ff8fc1, #ff5fa3);
+  transform: scale(1.1);
 }
 
-/* ---- tablets from 576px to 991px ---- */
-@media (min-width: 576px) and (max-width: 991.98px){
-  /* Typography: tablet medium */
-  html{ font-size:15px; }
-  h2.section-title{ font-size:1.15rem; }
-
-  /* Boxes: 2 in a row (wrap) */
-  .boxes-row{
-    flex-wrap:wrap;
-  }
-  .box{ flex-basis: calc(50% - 12px); }
+/* ---------- Table ---------- */
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: #ffe6f0;
+  box-shadow: 0 8px 20px rgba(255,95,163,0.2);
+  border-radius: 15px;
+  overflow: hidden;
+}
+th, td {
+  border: 1px solid #ffb3d1;
+  padding: 14px 24px;
+}
+th {
+  background-color: #ff5fa3;
+  color: white;
 }
 
-/* ---- desktop 992px and up ---- */
-@media (min-width: 992px){
-  html{ font-size:16px; } /* larger base for desktops */
-  h2.section-title{ font-size:1.3rem; }
-
-  /* Boxes: 3 in a row */
-  .boxes-row{ flex-wrap:nowrap; }
-  .box{ flex-basis: calc(33.333% - 12px); }
-
-  /* Sidebar: keep sticky on large screens (nice for defense demo) */
-  #sidebar { position: sticky; top: 90px; }
+/* ---------- Form ---------- */
+form {
+  margin-top: 20px;
+  background: #ffe6f0;
+  padding: 30px;
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255,95,163,0.2);
+}
+label {
+  display: block;
+  margin: 12px 0;
+}
+input, textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ffb3d1;
+  width: 100%;
+  max-width: 400px;
+  outline: none;
+}
+input:focus, textarea:focus {
+  border-color: #ff5fa3;
 }
 
-/* ---------- small cosmetics for print / assignment screenshots ---------- */
-@media print{
-  nav, footer, .btn-cta { display:none !important; }
+/* ---------- Section Titles ---------- */
+section h2 {
+  font-size: 2rem;
+  margin: 25px 0 15px 0;
+  color: #ff2e84;
+}
+
+/* ---------- CARD CONTAINER ---------- */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* ---------- INDIVIDUAL CARD ---------- */
+.card {
+    background: #ffe6f0;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255,95,163,0.3);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+    width: 100%;
+    border-radius: 20px;
+    border: 3px solid #ff5fa3;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255,95,163,0.5);
+}
+.card h3 {
+    color: #ff2e84;
+    margin: 15px 0 10px 0;
+}
+.card p {
+    font-size: 0.9rem;
+    color: #3a0e3c;
+    margin-bottom: 15px;
+}
+.card .btn {
+    background: linear-gradient(90deg, #ff5fa3, #ff8fc1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+.card .btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ff8fc1, #ff5fa3);
 }
