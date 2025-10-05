@@ -2,114 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nazekas wpage</title>
+    <title>Responsive Portfolio - Nazerke</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- ===== HEADER ===== -->
-    <header>
-        <h1>Kaliyeva Nazerke</h1>
-        <h2>Group: SE-2421</h2>
-        <h3>About Me</h3>
-        <p>Hello! I'm Nazerke 🌸 I love travelling, creativity, and exploring new ideas!</p>
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-pink shadow-sm">
+      <div class="container">
+        <a class="navbar-brand text-white fw-bold" href="#">Nazerke</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== RESPONSIVE TYPOGRAPHY ===== -->
+    <header class="text-center py-5">
+        <h1 class="display-4">Welcome to My Portfolio</h1>
+        <p class="lead">Responsive Design with Media Queries & Bootstrap Grid</p>
     </header>
 
-    <!-- ===== HOBBIES / FAVORITE WEBSITES ===== -->
-    <section>
-        <h2>My Hobbies</h2>
-        <ol>
-            <li>Reading 📚</li>
-            <li>Coding 💻</li>
-            <li>Traveling ✈️</li>
-        </ol>
-
-        <h2>Favorite Websites</h2>
-        <ul>
-            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-            <li><a href="https://www.tiktok.com" target="_blank">Tiktok</a></li>
-            <li><a href="https://www.netflix.com/kz/" target="_blank">Netflix</a></li>
-        </ul>
+    <!-- ===== RESPONSIVE BOXES (Media Queries) ===== -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Responsive Boxes</h2>
+      <div class="boxes d-flex flex-wrap justify-content-center gap-3">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
     </section>
 
-    <!-- ===== CAT CARDS ===== -->
-    <section>
-        <h2>My Cute Cat Cards 🐱</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="https://placekitten.com/300/200" alt="Cat 1">
-                <h3>Fluffy</h3>
-                <p>This little kitty loves naps and cuddles.</p>
-                <button class="btn">Adopt Me</button>
+    <!-- ===== BOOTSTRAP GRID PROJECT CARDS ===== -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Portfolio Projects</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card">
+            <img src="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Project One</h5>
+              <p class="card-text">views of beuty.</p>
+              <a href="#" class="btn">View Project</a>
             </div>
-            <div class="card">
-                <img src="https://placekitten.com/301/200" alt="Cat 2">
-                <h3>Mittens</h3>
-                <p>Always playful and curious, full of energy.</p>
-                <button class="btn">Adopt Me</button>
-            </div>
-            <div class="card">
-                <img src="https://placekitten.com/302/200" alt="Cat 3">
-                <h3>Snowball</h3>
-                <p>Loves cuddles and soft blankets.</p>
-                <button class="btn">Adopt Me</button>
-            </div>
+          </div>
         </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card">
+            <img src="https://static.bhphotovideo.com/explora/sites/default/files/03-shutterstock_97696616.jpg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Project Two</h5>
+              <p class="card-text">Another mountains view.</p>
+              <a href="#" class="btn">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card project-card">
+            <img src="https://independent-photo.com/wp-content/uploads/2022/02/Yifeng-Ding-scaled.jpeg" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Project Three</h5>
+              <p class="card-text">🌸🌸🎀🎀.</p>
+              <a href="#" class="btn">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ===== PHOTO ===== -->
-    <section>
-        <h2>My Photo</h2>
-        <img src="IMG_1334.jpeg" alt="My Photo" width="250">
+    <!-- ===== SIDEBAR & MAIN FLEX ===== -->
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-lg-8 mb-4">
+          <h2>Main Content</h2>
+          <p>This is the main content section. </p>
+        </div>
+        <div class="col-lg-4 mb-4 sidebar">
+          <h3>About Me</h3>
+          <p>I am Nazerke, I love travel!</p>
+        </div>
+      </div>
     </section>
 
-    <!-- ===== BUTTON ===== -->
-    <section>
-        <button class="btn">Click Me 🎉</button>
-    </section>
+    <!-- ===== FOOTER ===== -->
+    <footer class="text-center py-4 bg-pink text-white">
+      <p>&copy; 2025 Nazerke Kallieva. All Rights Reserved.</p>
+    </footer>
 
-    <!-- ===== SCHEDULE ===== -->
-    <section>
-        <h2>My Schedule</h2>
-        <table>
-            <tr>
-                <th>Subject</th>
-                <th>Day</th>
-                <th>Time</th>
-            </tr>
-            <tr>
-                <td>Web Technologies</td>
-                <td>Monday</td>
-                <td>09:00</td>
-            </tr>
-            <tr>
-                <td>Database</td>
-                <td>Wednesday</td>
-                <td>13:00</td>
-            </tr>
-            <tr>
-                <td>Programming</td>
-                <td>Friday</td>
-                <td>11:00</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- ===== MOOD ===== -->
-    <section>
-        <h2>Today's Mood</h2>
-        <p>I'm feeling happy 😄, excited 🌟, and motivated 🚀 today!</p>
-    </section>
-
-    <!-- ===== CONTACT FORM ===== -->
-    <section>
-        <h2>Contact Me</h2>
-        <form>
-            <label>Name: <input type="text" name="name"></label><br><br>
-            <label>Email: <input type="email" name="email"></label><br><br>
-            <label>Favorite Color: <input type="color" name="color"></label><br><br>
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
