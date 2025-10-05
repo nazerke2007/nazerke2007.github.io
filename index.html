@@ -1,104 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Assignment #3 - Flexbox & Grid</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 4</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-  <!-- Task 0: Flexbox Navigation -->
-  <header class="navbar">
-    <div class="logo">🌸 MyLogo</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <!-- ===== Header / Bootstrap Navbar (Part 2 - Task 3) ===== -->
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient shadow-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <span class="brand-bubble">🎨</span>
+          <span class="ms-2 brand-text">Nazek Portfolio</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <!-- Task 1: Flexbox Cards -->
-  <section class="card-row">
-    <div class="card">
-      <img src="https://picsum.photos/200/120?random=1" alt="Card 1">
-      <h3>Card 1</h3>
-      <p>This is the first colorful card.</p>
-      <button>Read More</button>
-    </div>
-    <div class="card">
-      <img src="https://picsum.photos/200/120?random=2" alt="Card 2">
-      <h3>Card 2</h3>
-      <p>This is the second vibrant card.</p>
-      <button>Read More</button>
-    </div>
-    <div class="card">
-      <img src="https://picsum.photos/200/120?random=3" alt="Card 3">
-      <h3>Card 3</h3>
-      <p>This is the third glowing card.</p>
-      <button>Read More</button>
-    </div>
-  </section>
+  <main class="container">
 
-  <!-- Task 2: Grid Layout -->
-  <section class="grid-layout">
-    <header class="grid-header">✨ Grid Header</header>
-    <aside class="grid-sidebar">🌈 Sidebar</aside>
-    <main class="grid-main">💻 Main Content</main>
-    <footer class="grid-footer">🌟 Grid Footer</footer>
-  </section>
-
-  <!-- Task 3: Image Gallery -->
-  <section class="gallery">
-    <img src="https://picsum.photos/200?random=11" alt="1">
-    <img src="https://picsum.photos/200?random=12" alt="2">
-    <img src="https://picsum.photos/200?random=13" alt="3">
-    <img src="https://picsum.photos/200?random=14" alt="4">
-    <img src="https://picsum.photos/200?random=15" alt="5">
-    <img src="https://picsum.photos/200?random=16" alt="6">
-    <img src="https://picsum.photos/200?random=17" alt="7">
-    <img src="https://picsum.photos/200?random=18" alt="8">
-    <img src="https://picsum.photos/200?random=19" alt="9">
-  </section>
-
-  <!-- Task 4: Portfolio Page -->
-  <section class="portfolio">
-    <header class="portfolio-header">
-      <div class="logo">🎨 Portfolio</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="portfolio-main">
-      <div class="projects">
-        <div class="project-card">
-          <h3>🌟 Project 1</h3>
-          <p>A creative and stylish project.</p>
-          <button>View</button>
+   
+       <!-- ===== Part 1: Media Queries - Task 0 (Responsive Typography) ===== -->
+       <section class="mb-5">
+        <h2 class="section-title">Responsive Typography</h2>
+        <p class="lead responsive-text">
+          Hello! This paragraph and headings change size across breakpoints using CSS media queries.
+          (Mobile → Tablet → Desktop)
+        </p>
+        <hr>
+        <h3>Example Heading</h3>
+        <p>Resize the browser or open on a phone/tablet to see font-size changes defined in <code>style.css</code>.</p>
+      </section>
+  
+      <!-- ===== Part 1: Media Queries - Task 1 (Three boxes via CSS only) ===== -->
+      <section class="mb-5">
+        <h2 class="section-title">Responsive Boxes (Media Queries only)</h2>
+  
+        <div class="boxes-row">
+          <div class="box">Box 1<br><small>Some content</small></div>
+          <div class="box">Box 2<br><small>Some content</small></div>
+          <div class="box">Box 3<br><small>Some content</small></div>
         </div>
-        <div class="project-card">
-          <h3>🚀 Project 2</h3>
-          <p>A modern and interactive project.</p>
-          <button>View</button>
+  
+        <p class="mt-3 small text-muted">Behavior: Desktop — 3 in a row; Tablet — 2 in a row; Mobile — stacked. (No Bootstrap used here.)</p>
+      </section>
+  
+
+    <!-- ===== Part 2: Bootstrap Grid - Task 2 (columns) ===== -->
+    <section class="mb-5">
+      <h2 class="section-title">Bootstrap Grid — Responsive Columns</h2>
+
+      <!-- Using Bootstrap columns for task 2 -->
+      <div class="row gx-3 gy-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="p-4 bg-glass rounded">Column 1</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="p-4 bg-glass rounded">Column 2</div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="p-4 bg-glass rounded">Column 3</div>
         </div>
       </div>
-      <aside class="portfolio-sidebar">
-        <h3>📌 Info</h3>
-        <p>Extra sidebar content with a colorful background.</p>
-      </aside>
+
+      <p class="mt-2 small text-muted">Desktop: 3 equal columns. Tablet: 2 top, 1 bottom. Mobile: stacked.</p>
+    </section>
+
+    <!-- ===== Part 3: Combined Project - Task 4 (Responsive Portfolio Page) ===== -->
+    <section id="projects" class="mb-5">
+      <h2 class="section-title">Responsive Portfolio Page</h2>
+
+      <div class="row">
+        <!-- Left side: Projects (Bootstrap grid) -->
+        <div class="col-12 col-lg-8">
+          <div class="row gx-3 gy-4">
+            <!-- each project uses bootstrap col sizes -->
+            <div class="col-12 col-md-6">
+              <article class="card project-card h-100">
+                <img src="https://picsum.photos/seed/p1/600/350" class="card-img-top" alt="Project 1">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Project A</h5>
+                  <p class="card-text">Short description of project A. Uses Bootstrap grid inside portfolio.</p>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-cta">View</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="card project-card h-100">
+                <img src="https://picsum.photos/seed/p2/600/350" class="card-img-top" alt="Project 2">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Project B</h5>
+                  <p class="card-text">Short description of project B.</p>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-cta">View</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="card project-card h-100">
+                <img src="https://picsum.photos/seed/p3/600/350" class="card-img-top" alt="Project 3">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Project C</h5>
+                  <p class="card-text">Short description of project C.</p>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-cta">View</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="card project-card h-100">
+                <img src="https://picsum.photos/seed/p4/600/350" class="card-img-top" alt="Project 4">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Project D</h5>
+                  <p class="card-text">Short description of project D.</p>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-cta">View</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side: Sidebar -->
+        <aside id="sidebar" class="col-12 col-lg-4">
+          <div class="card sidebar-card p-3 mb-4">
+            <div class="d-flex align-items-center">
+              <img src="https://picsum.photos/seed/avatar/120/120" alt="avatar" class="rounded-circle me-3 sidebar-avatar">
+              <div>
+                <h5 class="mb-0">Your Full Name</h5>
+                <small class="text-muted">Group: Your Group</small>
+              </div>
+            </div>
+
+            <hr>
+
+            <h6>Contact</h6>
+            <p class="small mb-1">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+            <p class="small">Phone: +7 (xxx) xxx-xxxx</p>
+
+            <hr>
+
+            <h6>Skills</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge skill">HTML</span>
+              <span class="badge skill">CSS</span>
+              <span class="badge skill">Bootstrap</span>
+              <span class="badge skill">Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="card sidebar-card p-3">
+            <h6>About</h6>
+            <p class="small">Short portfolio summary. This sidebar stays visible on larger screens and becomes stacked on mobile via Bootstrap grid + media queries.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Part 2: Image Gallery (Bootstrap for card alignment optional) ===== -->
+    <section id="gallery" class="mb-5">
+      <h2 class="section-title">Gallery</h2>
+      <div class="row gx-3 gy-3">
+        <!-- 9 images -->
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g1/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g2/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g3/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g4/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g5/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g6/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g7/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g8/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+        <div class="col-6 col-md-4">
+          <img src="https://picsum.photos/seed/g9/400/300" class="img-fluid gallery-img rounded" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact (small form) ===== -->
+    <section id="contact" class="mb-5">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form row gx-3 gy-3">
+        <div class="col-12 col-md-6">
+          <input class="form-control" placeholder="Your name" required>
+        </div>
+        <div class="col-12 col-md-6">
+          <input type="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="col-12">
+          <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-cta">Send Message</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="py-4 bg-gradient-dark text-white">
+    <div class="container text-center small">
+      © <span id="year"></span> Your Full Name — Responsive Web Design Assignment (Bootstrap + Media Queries)
     </div>
+  </footer>
 
-    <footer class="portfolio-footer">
-      <p>&copy; 2025 My Portfolio ✨</p>
-    </footer>
-  </section>
+  <!-- Bootstrap JS (bundle includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+  <script>
+    // small script to set the current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
